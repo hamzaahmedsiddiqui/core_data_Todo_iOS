@@ -20,3 +20,23 @@ struct PersistenceController{
         }
     }
 }
+
+//extension PersistenceController {
+//    func importTasks(_ items: [(title: String, scheduleDate: Date)]) {
+//        container.performBackgroundTask { backgroundContext in
+//            for item in items {
+//                let task = TaskItem(context: backgroundContext)
+//                task.id = UUID()
+//                task.title = item.title
+//                task.scheduleDate = item.scheduleDate
+//                task.completed = false
+//            }
+//
+//            do {
+//                try backgroundContext.save()
+//            } catch {
+//                print("Import failed: \(error)")
+//            }
+//        }
+//    }
+//}
